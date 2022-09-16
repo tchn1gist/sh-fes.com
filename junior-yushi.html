@@ -10,6 +10,402 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style2.css">
   <link rel="shortcut icon" href="favicon.ico">
+  <style>
+  /* 調整用スタイル */
+*{
+  font-family: "M+ 1p";
+}
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+
+main {
+  background-color: #f1f1f1;
+  height: 2200px;
+  display: flex;
+
+}
+
+
+.main {
+  margin: auto;
+  height: 2200px;
+  font-size: 20px;
+}
+
+.footer {
+  background: linear-gradient(#f1f1f1, #b7feff);
+  height: 200px;
+  display: flex;
+
+  color: black;
+}
+
+.footer div {
+  margin: auto;
+}
+
+
+/* ヘッダー */
+
+
+.header {
+  box-shadow: 0px 17px 16px -6px rgba(0,0,0,0.1);
+  
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__inner {
+
+  padding-right: 20px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+}
+
+
+/* ヘッダーのロゴ部分 */
+.header__title {
+  width: 80px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__title {
+    width: 120px;
+  }
+
+}
+
+.header__title img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ヘッダーのナビ部分 */
+
+.header__nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: #fff;
+  transition: ease .4s;
+  color: #fff;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__nav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  .nav__items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+
+.nav-items {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .nav-items {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+}
+
+/* ナビのリンク */
+.nav-items__item a {
+  color: black;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  
+}
+
+.nav-items__item:last-child a {
+
+  transition: color .3s;
+}
+
+@media screen and (min-width: 960px) {
+  .nav-items__item a {
+    margin-bottom: 0;
+  }
+  .footer {
+    font-size: 10%
+  }
+}
+
+
+/* ハンバーガーメニュー */
+
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+
+}
+
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+  .
+}
+
+/* ハンバーガーメニューの線 */
+.hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: M+ 1p;
+}
+
+.link {
+  padding: 0 10px;
+}
+
+.container1 {
+  background: white;
+
+  font-size: 26px;
+
+  height: 600px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.container2 {
+  background: #fff;
+
+  font-size: 26px;
+
+  height: 600px;
+  padding-top: 50px;
+  text-align: center;
+}
+/* 背景画像の見えている高さ */
+.parallax {
+  height: 500px;
+}
+
+/* 背景画像 */
+.parallax::before {
+  background-image: url(test.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+  /* headerを画面上部に固定する */
+
+  /* ロゴとナビゲーションを横並びにする */
+
+  align-items: center;
+  /* スクロールしても他のコンテンツの下にならないようにする */
+  z-index: 10;
+  /* 背景色を黒にする */
+  background: rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+
+  /* アニメーションの変化時間 */
+  transition: 0.5s;
+}
+
+/* ロゴのデザイン */
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 10px;
+  /* アニメーションの変化時間 */
+  transition: 0.5s;
+}
+
+/* ナビゲーションのリンクを横並びにする */
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+/* ナビゲーションのリンクのスタイル調整 */
+a {
+  display: inline-block;
+  margin-left: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  /* アニメーションの変化時間 */
+  transition: 0.5s;
+}
+
+/* スクロールするため高さを出すためのsection */
+
+
+/* スクロールして「scroll-navクラス」がついたときのヘッダーデザイン */
+header.scroll-nav {
+  /* 余白を狭くする */
+  padding: 10px 15px;
+  /* 背景を白にする */
+  background: rgb(255, 255, 255);
+  
+  /* コンテンツの背景が白でもナビゲーションだと分かりやすいように影をつける */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* 「scroll-navクラス」がヘッダーについたときに、ロゴとナビゲーションの文字を黒にする */
+header.scroll-nav .logo,
+header.scroll-nav ul li a {
+  color: #000;
+}
+
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.button::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .1s;
+}
+.button:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.article {
+  font-size: 60px;
+}
+
+.honbun {
+  letter-spacing: 3px;
+}
+</style>
 </head>
 
 <body>
